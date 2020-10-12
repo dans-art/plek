@@ -1,0 +1,120 @@
+/**
+ * Plugin Name: Plekvetica
+ * Plugin URI: https://www.plekvetica.ch/
+ * Description: Main Style of the Plugin.
+ * Version: 0.7
+ * Date: 2020-07-10
+ * Author: Daniel Spycher
+ */
+
+//Set Color Variables
+$primaryColor : rgba(173,53,53,0.85);
+$primaryColorDark : rgba(126, 35, 35, 0.85);
+$secondaryColor : #610a0a;
+
+$primaryTextColor: #ffffff;
+$primaryTextHeaderColor: #D4850E;;
+
+.plek_overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: $secondaryColor;
+    z-index: 99998;
+
+    .title{
+        width: 80%;
+        float: left;
+        font-size: 1.5em;
+        padding: 1em 0;
+    }
+    .plek_overlay_close{
+        padding: 1em 1em;
+        width: 20%;
+        font-size: 1.5em;
+        text-align: right;
+        float: left;
+        font-family: "FontAwesome";
+        &:before{
+            content: "\f00d";
+            cursor: pointer;
+        }
+    }
+    .plek_overlay_btn{
+        position: absolute;
+        min-width: 100px;
+        max-width: 250px;
+        width: 20%;
+
+        div{
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1em;
+            font-family: "FontAwesome";
+        }
+        #change_ok:before,
+        #change_ignore:before{
+            padding: 0.5em;
+            width: 2em;
+            height: 2em;
+            color: white;
+            
+        }
+
+        #change_ok:before{
+            content: "\f00c";
+            background-color: #54770f;
+            border: 1px solid #00571a;
+        }
+        #change_ignore:before{
+            content: "\f00d";
+            background-color: #e21010;
+            border: 1px solid #840000;
+            padding: 0.5em 0.7em;
+        }
+    }
+    .plek-loader{
+        text-align: center;
+        padding: 20% 0 30% 0;
+    }
+    .container{
+        background-color: $secondaryColor;
+        color: black;
+        border-radius: 12px;
+        margin: 5% auto;
+        .tableHeader{
+            font-weight: bold;
+            td{
+                text-align: center;
+            }
+        }
+        tr td:nth-child(3){
+            background-color: $primaryColor;
+        }
+        tr td:nth-child(1):first-letter {
+            text-transform: uppercase;
+        }
+        td{
+            max-width: 350px;
+            word-break: break-word;
+            padding: 1em;
+            vertical-align: baseline;
+        }
+        .bandDetails {
+            display: none;
+        }
+    }
+    .plek-button{
+        height:auto;
+        line-height: normal;
+    }
+    #deleteRevCon{
+        height: 4em;
+    }
+    h2{
+        text-align: center;
+        color: black;
+        padding-top: 1em;
+    }
+}
